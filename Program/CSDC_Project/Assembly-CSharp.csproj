@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{97FC5A5A-A7A4-9D55-BC27-36F2AE4B6804}</ProjectGuid>
+    <ProjectGuid>{66F33AD2-79B9-247D-07E0-19FF421B8BCD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -61,22 +61,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\Access.cs" />
     <Compile Include="Assets\Script\EnemyController.cs" />
-    <Compile Include="Assets\Script\ObjManager.cs" />
     <Compile Include="Assets\Script\PlayerController.cs" />
-    <Compile Include="Assets\Script\Reseaver.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/work/lab/4年/未来創造展/CSDC/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/lizeb/OneDrive/ドキュメント/CSDC/Program/CSDC_Project/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/work/lab/4年/未来創造展/CSDC/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/lizeb/OneDrive/ドキュメント/CSDC/Program/CSDC_Project/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/work/lab/4年/未来創造展/CSDC/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/lizeb/OneDrive/ドキュメント/CSDC/Program/CSDC_Project/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/work/lab/4年/未来創造展/CSDC/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/lizeb/OneDrive/ドキュメント/CSDC/Program/CSDC_Project/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
