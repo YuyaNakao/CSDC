@@ -1,0 +1,7 @@
+【CameraMoveスクリプト】
+　■SetStay()関数
+　　スタート位置のflg設定を未設定から待機設定に変更する
+
+　■GetCameraFlg(int)関数
+　　参照したい移動場所のflgを取得する
+
