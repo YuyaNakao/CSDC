@@ -2,79 +2,39 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+class PlayerController
 {
-    [SerializeField] float speed = 3.0f;
-    float moveX = 0.0f;
-    float moveZ = 0.0f;
 
-    public GameObject[] Beacon;
-    public GameObject obj;
-    public GameObject face;
-    Vector3 face_size;
+    private int m_num = 0;
 
-    int beacon_count = 0;
-    CharacterController controller;
-
-    void UpdateKey()
+    public void Init(int num)
     {
-        //ビーコン設置上限
-        if (beacon_count < Beacon.Length)
+        m_num = num;
+    }
+
+    public bool GetInput(int button_num)
+    {
+        switch (m_num)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                //ビーコン設置
-                SetBeacon();
-            }
+            case 0:
+                switch (button_num)
+                {
+                    case 0:
+                        return Input.GetKeyDown(KeyCode.A);
+                    case 1:
+                        return Input.GetKeyDown(KeyCode.B);
+                }
+                break;
+            case 1:
+                switch (button_num)
+                {
+                    case 0:
+                        return Input.GetKeyDown(KeyCode.C);
+                    case 1:
+                        return Input.GetKeyDown(KeyCode.D);
+                }
+                break;
         }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            //ビーコン消去
-            Reset();
-        }
+        return false;
     }
-    void SetBeacon()
-    {
-        if (beacon_count > Beacon.Length) return;
-        //ビーコン生成
-        Beacon[beacon_count]=Instantiate(obj, this.transform.position, Quaternion.identity);
-        Beacon[beacon_count].name = "beacon" + beacon_count;
-        beacon_count++;
-
-        //　矩形生成
-        if (beacon_count == Beacon.Length)
-        {
-            face.SetActive(true);
-            face_size = Beacon[0].transform.position - Beacon[1].transform.position;
-            face.transform.localScale = face_size;
-            face.transform.position = Beacon[1].transform.position + (face_size / 2.0f);
-        }
-    }
-
-    void Reset()
-    {
-        for (int i = 0; i < beacon_count; i++) {
-            //ビーコン消去
-            Destroy(Beacon[i]);
-        }
-        face.SetActive(false);
-        beacon_count = 0;
-    }
-
-    void Start()
-    {
-        controller = GetComponent<CharacterController>();
-        face.SetActive(false);
-    }
-
-    void Update()
-    {
-        UpdateKey();
-        moveX = Input.GetAxis("Horizontal") * speed;
-        moveZ = Input.GetAxis("Vertical") * speed;
-        Vector3 direction = new Vector3(moveX, 0, moveZ);
-        controller.SimpleMove(direction);
-    }
-
-
 }
