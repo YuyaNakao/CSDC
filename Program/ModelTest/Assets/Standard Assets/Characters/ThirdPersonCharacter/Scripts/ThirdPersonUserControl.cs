@@ -13,6 +13,25 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         private Vector3 m_Move;
         private bool m_Jump;                      // the world-relative desired move direction, calculated from the camForward and user input.
 
+		//キャラクター
+		public GameObject mainCharacter;
+		public GameObject target;
+
+		//キャラクターコントローラー宣言
+		private CharacterController characterController;
+		//Animator宣言
+		private Animator animator;
+
+		//引張ハンティングフラグ関連
+		public bool pullFlag = false;	//引っ張り始めたフラグ
+		public bool popFlag = false;	//弾け飛ばすフラグ
+
+		public float speed = 1.0f;
+		float moveX = 0f;
+		float moveZ = 0f;
+		Rigidbody rb;
+
+
         
         private void Start()
         {
@@ -30,6 +49,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
             // get the third person character ( this should never be null due to require component )
             m_Character = GetComponent<ThirdPersonCharacter>();
+			//Animatorを確保
+			characterController = GetComponent <CharacterController> ();
+			animator = GetComponent <Animator> ();
+			rb = GetComponent<Rigidbody> ();
         }
 
 
@@ -41,12 +64,52 @@ namespace UnityStandardAssets.Characters.ThirdPerson
                 m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
             }
             */
+
+			//1フレームだけTrueにしたいため、毎回最初にfalseを入れる。
+			popFlag = false;
+
+
+			//スペースの入力で引張ハンティングスタート
+			if (Input.GetKey (KeyCode.Space)) {
+				animator.SetBool ("pullFlag", true);
+				pullFlag = true;	//ひっぱり開始の合図
+			} else {
+				animator.SetBool ("pullFlag", false);
+				pullFlag = false;	//ひっぱり終了
+				popFlag = true;		//発射フラグを立てる。マイフレームリセットしてるから、一フレームだけ通るはず？？？
+			}
+
+			//pull中はキャラクターの向きを反転させる　→　☓
+			//ターゲットの向きを向いて歩きたい →　○
+			//pullFlgを持っていればターゲットの方を向き続ける。
+			if (pullFlag) {
+				mainCharacter.transform.LookAt (target.transform);
+			} 
+
+
+			//移動中はAnimationを再生させておく。
+			//移動指定なくて、かつ、引っ張っているならばAnimationを止める。
+			//AnimationSpeed->Speed->MultPlierに影響させている。
+			if (Input.GetAxis("Horizontal") != 0.0f || Input.GetAxis("Vertical") != 0.0f ) {	
+				//animator.SetFloat("AnimationSpeed", 1.0f);
+			} else if(pullFlag){
+				animator.SetFloat("AnimationSpeed", 0.0f);
+			}
+
+			//移動スクリプト
+			moveX = Input.GetAxis ("Horizontal") * speed;
+			moveZ = Input.GetAxis ("Vertical") * speed;
+			Vector3 direction = new Vector3(moveX , 0, moveZ);
+
+
         }
 
 
         // Fixed update is called in sync with physics
         private void FixedUpdate()
         {
+
+
             // read inputs
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
             float v = CrossPlatformInputManager.GetAxis("Vertical");
@@ -70,8 +133,32 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 #endif
 
             // pass all parameters to the character control script
-            m_Character.Move(m_Move, crouch, m_Jump);
-            m_Jump = false;
+			if (pullFlag) {
+
+				//前なら逆再生させる
+
+				if (Input.GetKey (KeyCode.W)) {
+					transform.position += transform.forward * speed * Time.deltaTime;
+					animator.SetFloat("AnimationSpeed", -1);
+				}
+				if (Input.GetKey (KeyCode.S)) {
+					transform.position -= transform.forward * speed * Time.deltaTime;
+					animator.SetFloat("AnimationSpeed", 1);
+				}
+				if (Input.GetKey(KeyCode.D)) {
+					transform.position += transform.right * speed * Time.deltaTime;
+					animator.SetFloat("AnimationSpeed", 1);
+				}
+				if (Input.GetKey (KeyCode.A)) {
+					transform.position -= transform.right * speed * Time.deltaTime;
+					animator.SetFloat("AnimationSpeed", -1);
+				}
+
+			} else {
+
+				m_Character.Move (m_Move, crouch, m_Jump);
+			}
+			m_Jump = false;
         }
     }
 }

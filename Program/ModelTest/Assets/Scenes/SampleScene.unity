@@ -412,6 +412,26 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 881404803}
+    - target: {fileID: 114793623920748678, guid: 4ab108a8013fc3447ada347344fd066f,
+        type: 2}
+      propertyPath: mainCharacter
+      value: 
+      objectReference: {fileID: 416015859}
+    - target: {fileID: 114793623920748678, guid: 4ab108a8013fc3447ada347344fd066f,
+        type: 2}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 881404803}
+    - target: {fileID: 114057040446384260, guid: 4ab108a8013fc3447ada347344fd066f,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114793623920748678, guid: 4ab108a8013fc3447ada347344fd066f,
+        type: 2}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ab108a8013fc3447ada347344fd066f, type: 2}
   m_IsPrefabAsset: 0
