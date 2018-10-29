@@ -35,10 +35,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         private void Update()
         {
-            if (!m_Jump)
+            /* ジャンプより削除
+             if (!m_Jump)
             {
                 m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
             }
+            */
         }
 
 
