@@ -73,17 +73,17 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			//スペースの入力で引張ハンティングスタート
 			if (Input.GetKey (KeyCode.P)) {
 				animator.SetBool ("pullFlag", true);
-				pullFlag = true;	//ひっぱり開始の合図
+				pullFlag = animator.GetBool("pullFlag");	//ひっぱり開始の合図
 			} else {
 				animator.SetBool ("pullFlag", false);
-				pullFlag = false;	//ひっぱり終了
+				pullFlag = animator.GetBool("pullFlag");	//ひっぱり終了
 				popFlag = true;		//発射フラグを立てる。マイフレームリセットしてるから、一フレームだけ通るはず？？？
 			}
 
 			//pull中はキャラクターの向きを反転させる　→　☓
 			//ターゲットの向きを向いて歩きたい →　○
 			//pullFlgを持っていればターゲットの方を向き続ける。
-			if (pullFlag) {
+			if (animator.GetBool("pullFlag")) {
 				mainCharacter.transform.LookAt (target.transform);
 			} 
 
@@ -102,7 +102,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			//AnimationSpeed->Speed->MultPlierに影響させている。
 			if (Input.GetAxis("Horizontal") != 0.0f || Input.GetAxis("Vertical") != 0.0f ) {	
 				//animator.SetFloat("AnimationSpeed", 1.0f);
-			} else if(pullFlag){
+			} else if(animator.GetBool("pullFlag")){
 				animator.SetFloat("AnimationSpeed", 0.0f);
 			}
 
