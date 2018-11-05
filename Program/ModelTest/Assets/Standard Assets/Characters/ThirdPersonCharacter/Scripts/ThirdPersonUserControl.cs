@@ -58,6 +58,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         private void Update()
         {
+			animator.SetBool ("toss", false);
             /* ジャンプより削除
              if (!m_Jump)
             {
@@ -70,7 +71,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 
 			//スペースの入力で引張ハンティングスタート
-			if (Input.GetKey (KeyCode.Space)) {
+			if (Input.GetKey (KeyCode.P)) {
 				animator.SetBool ("pullFlag", true);
 				pullFlag = true;	//ひっぱり開始の合図
 			} else {
@@ -85,6 +86,15 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			if (pullFlag) {
 				mainCharacter.transform.LookAt (target.transform);
 			} 
+
+			//ビリヤード射出
+			if (Input.GetKey (KeyCode.Space)) {
+				animator.SetBool ("tossIdle", true);
+			} else {
+				animator.SetBool ("tossIdle", false);
+				animator.SetBool ("toss", true);
+			}
+
 
 
 			//移動中はAnimationを再生させておく。
