@@ -1,0 +1,4 @@
+sceneSetups:
+- path: D:/0.CSDC_Clone/Program/CSDC_Project/AllScenes/TitleScene/Scene/TitleScene.unity
+  isLoaded: 1
+  isActive: 1
