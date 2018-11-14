@@ -13,14 +13,18 @@ public class PlayerAnima : MonoBehaviour
     // Animator コンポーネント
     private Animator animator;
 
+    // 立つフラグ
+    private const string key_isStandup = "standupFlg";
+
     // 待機フラグ
-    private const string key_isWait = "isWait";
+    private const string setting_flg = "settingFlg";
 
     // Use this for initialization
     void Start ()
     {
         // プレイヤーに設定されているAnimatorコンポーネントを取得する
         this.animator = GetComponent<Animator>();
+        this.animator.SetBool(setting_flg, true);
 	}
 	
 	// Update is called once per frame
@@ -30,7 +34,7 @@ public class PlayerAnima : MonoBehaviour
         if (Input.GetButtonDown("Player1_Kettei"))
         {
             // 待機モーションに入る
-            this.animator.SetBool(key_isWait, true); 
+            this.animator.SetBool(key_isStandup, true); 
             if(flg == false)
             {
                 // プレイヤーの参加人数を加える
@@ -57,6 +61,5 @@ public class PlayerAnima : MonoBehaviour
         {
             flg = false;
         }
-        
     }
 }

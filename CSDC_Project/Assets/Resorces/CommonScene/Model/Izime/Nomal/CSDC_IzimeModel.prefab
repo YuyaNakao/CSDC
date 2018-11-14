@@ -2051,7 +2051,7 @@ Transform:
   m_Father: {fileID: 4781191464877272}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!90 &90126119386574636
+--- !u!90 &90120480328974266
 Avatar:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3503,7 +3503,7 @@ Animator:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1738899066986076}
   m_Enabled: 1
-  m_Avatar: {fileID: 90126119386574636}
+  m_Avatar: {fileID: 90120480328974266}
   m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -3524,8 +3524,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3869812175467a143ab9cd865752b4a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Avatar: {fileID: 90126119386574636}
-  Description: {fileID: 114318241715407276}
+  Avatar: {fileID: 90120480328974266}
+  Description: {fileID: 114263371108572962}
 --- !u!114 &114221553952981176
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3537,7 +3537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690ea0146224b8b4694a1925dddeb352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Meta: {fileID: 114754868660120890}
+  Meta: {fileID: 114377523516452316}
 --- !u!114 &114224007523243600
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3555,7 +3555,7 @@ MonoBehaviour:
   Head: {fileID: 0}
   m_yaw: 0
   m_pitch: 0
---- !u!114 &114318241715407276
+--- !u!114 &114263371108572962
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3953,6 +3953,31 @@ MonoBehaviour:
     max: {x: 0, y: 0, z: 0}
     center: {x: 0, y: 0, z: 0}
     axisLength: 0
+--- !u!114 &114377523516452316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b589176a34b344b9ccbee2b7e7114a, type: 3}
+  m_Name: Meta
+  m_EditorClassIdentifier: 
+  ExporterVersion: UniVRM-0.44
+  Title: CSDC_IzimeModel
+  Version: 
+  Author: Cielo
+  ContactInformation: 
+  Reference: 
+  Thumbnail: {fileID: 2800000, guid: bd761a855efe7ea44b1932b5df62a084, type: 3}
+  AllowedUser: 1
+  ViolentUssage: 0
+  SexualUssage: 0
+  CommercialUssage: 0
+  OtherPermissionUrl: 
+  LicenseType: 0
+  OtherLicenseUrl: 
 --- !u!114 &114418383568842104
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4165,31 +4190,6 @@ MonoBehaviour:
     FirstPersonFlag: 0
   - Renderer: {fileID: 137404593326020740}
     FirstPersonFlag: 0
---- !u!114 &114754868660120890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63b589176a34b344b9ccbee2b7e7114a, type: 3}
-  m_Name: Meta
-  m_EditorClassIdentifier: 
-  ExporterVersion: UniVRM-0.44
-  Title: CSDC_IzimeModel
-  Version: 
-  Author: Cielo
-  ContactInformation: 
-  Reference: 
-  Thumbnail: {fileID: 2800000, guid: bd761a855efe7ea44b1932b5df62a084, type: 3}
-  AllowedUser: 1
-  ViolentUssage: 0
-  SexualUssage: 0
-  CommercialUssage: 0
-  OtherPermissionUrl: 
-  LicenseType: 0
-  OtherLicenseUrl: 
 --- !u!137 &137404593326020740
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

@@ -243,8 +243,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 334087307}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 1.56, z: -1.7}
-  m_LocalScale: {x: 0.5, y: 0.01, z: 0.001}
+  m_LocalPosition: {x: -0.348, y: 1.08, z: -6.166}
+  m_LocalScale: {x: 0.25, y: 0.01, z: 0.001}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -260,9 +260,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 843c93e202f7d3a4889da8f3d0e3775d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  init_position: {x: -0.5, y: 1.56, z: -1.7}
-  x: -0.5
-  z: -1.7
+  init_position: {x: -0.348, y: 1.08, z: -6.166}
+  x: -0.348
+  z: -6.166
   player_score: 10
   player: {fileID: 334087307}
   number: 2
@@ -270,6 +270,7 @@ MonoBehaviour:
   numbers2: 0
   numbers3: 0
   numbers4: 0
+  StartTime: 5
 --- !u!1 &835731109
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,8 +351,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 835731109}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.47, y: 1.56, z: -1.7}
-  m_LocalScale: {x: 0.5, y: 0.01, z: 0.001}
+  m_LocalPosition: {x: 1.027, y: 1.08, z: -6.166}
+  m_LocalScale: {x: 0.25, y: 0.01, z: 0.001}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
@@ -367,9 +368,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 843c93e202f7d3a4889da8f3d0e3775d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  init_position: {x: 1.47, y: 1.56, z: -1.7}
-  x: 1.47
-  z: -1.7
+  init_position: {x: 1.027, y: 1.08, z: -6.166}
+  x: 1.027
+  z: -6.166
   player_score: 3
   player: {fileID: 835731109}
   number: 4
@@ -377,6 +378,7 @@ MonoBehaviour:
   numbers2: 0
   numbers3: 0
   numbers4: 0
+  StartTime: 5
 --- !u!1001 &837449402
 Prefab:
   m_ObjectHideFlags: 0
@@ -474,6 +476,21 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 95078464287249562, guid: 4ab108a8013fc3447ada347344fd066f,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e2cf68ff4b1ffda45a77f7307dd789b9, type: 2}
+    - target: {fileID: 114704930690764346, guid: 4ab108a8013fc3447ada347344fd066f,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114793623920748678, guid: 4ab108a8013fc3447ada347344fd066f,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ab108a8013fc3447ada347344fd066f, type: 2}
   m_IsPrefabAsset: 0
@@ -557,8 +574,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 933358443}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.48, y: 1.56, z: -1.7}
-  m_LocalScale: {x: 0.5, y: 0.01, z: 0.001}
+  m_LocalPosition: {x: 0.377, y: 1.08, z: -6.166}
+  m_LocalScale: {x: 0.25, y: 0.01, z: 0.001}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
@@ -574,9 +591,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 843c93e202f7d3a4889da8f3d0e3775d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  init_position: {x: 0.48, y: 1.56, z: -1.7}
-  x: 0.48
-  z: -1.7
+  init_position: {x: 0.377, y: 1.08, z: -6.166}
+  x: 0.377
+  z: -6.166
   player_score: 5
   player: {fileID: 933358443}
   number: 3
@@ -584,6 +601,7 @@ MonoBehaviour:
   numbers2: 0
   numbers3: 0
   numbers4: 0
+  StartTime: 5
 --- !u!1 &1203609643
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,12 +757,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8cd1b1a6e94b2479115aada1ef7215, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera: {fileID: 1474120721}
   camera_x: 0
   camera_y: 0
-  camera_z: 0
-  camera_z_max: 0
+  camera_z: 0.001
+  camera_zoom_speed: 0.005
+  camera_rotate_spped: -0.5
+  camera_y_max: 1.8
+  camera_z_max: -7.6
+  remove_camera_y: 1
+  remove_camera_z: -8.549
+  rotate_cameramax_x: -45
   camera_object: {x: 0, y: 1, z: -8.74}
-  camera: {fileID: 1474120721}
+  camera_rotate_object: {x: 0, y: 0, z: 0}
+  StartTime: 20
 --- !u!1001 &1520043153
 Prefab:
   m_ObjectHideFlags: 0
@@ -825,9 +851,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 843c93e202f7d3a4889da8f3d0e3775d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  init_position: {x: -1.576565, y: 1.58, z: -1.7}
-  x: -1.576565
-  z: -1.7
+  init_position: {x: -1.003, y: 1.08, z: -6.166}
+  x: -1.003
+  z: -6.166
   player_score: 100
   player: {fileID: 1552570867}
   number: 1
@@ -835,6 +861,7 @@ MonoBehaviour:
   numbers2: 0
   numbers3: 0
   numbers4: 0
+  StartTime: 5
 --- !u!65 &1552570869
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -896,8 +923,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1552570867}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.576565, y: 1.58, z: -1.7}
-  m_LocalScale: {x: 0.5, y: 0.01, z: 0.001}
+  m_LocalPosition: {x: -1.003, y: 1.08, z: -6.166}
+  m_LocalScale: {x: 0.25, y: 0.01, z: 0.001}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7

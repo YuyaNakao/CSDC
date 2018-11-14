@@ -34,6 +34,9 @@ public class Player_Score : MonoBehaviour
     [SerializeField]
     int numbers4;
 
+    [SerializeField]
+    private float StartTime;                // 何秒後に開始
+
     private Vector3 py;//Y座標一時保管
 
     // Use this for initialization
@@ -44,14 +47,21 @@ public class Player_Score : MonoBehaviour
         // 移動量の初期値
         move_score = 0;
         py = init_position;
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        // スコアの増加量を関数見る
-        Move_Score();
+        // 時間経過処理
+        StartTime -= Time.deltaTime;
+        // 一定時間経過すると処理に入る
+        if (StartTime <= 0)
+        {
+            // スコアの増加量を関数見る
+            Move_Score();
+        }
+
     }
 
     void Move_Score()
