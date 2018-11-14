@@ -1,0 +1,117 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class izimekko_L : MonoBehaviour {
+    public int izimepower;//イジメパワー
+    public float Speed = 5.0f;//移動量
+    private Vector3 TargetPosition;//目標点
+    private Vector3 OldPosition;
+    private float CangeTargetDistance = 1.0f;//この数値より近ければ次の目標点を決める
+    izimekko_L leader;
+    private GameObject[] izimerarekko;//いじめられっ子タグからのデータを入れるゲームオブジェクト
+    private Rigidbody rigid;
+    private int time1 = 0, time2 = 0;//状態遷移に使用する関数
+    public enum move{
+        loitering,
+        izimerarekko,
+    }
+    move move_mode;
+    void Start()
+    {
+        //初期位置設定
+        this.transform.position = GetPosition();
+        izimepower = 60;
+        //最初の目標点を決める
+        TargetPosition = GetPosition();
+        //いじめられっ子のデータを取得
+        izimerarekko = GameObject.FindGameObjectsWithTag("izimerarekko");
+        //慣性をなくす
+        
+    }
+    void Update()
+    {
+        float DistanceToTarget = 0.0f;//目標点との距離
+        Quaternion TargetRotation;//目標手への方向
+        DistanceToTarget = Vector3.Distance(this.transform.position, TargetPosition);//いじめられっ子への距離を計算
+        OldPosition = this.transform.position;
+        if (izimepower >= 0)
+        {
+            switch (move_mode)
+            {
+                case move.loitering://徘徊
+                    //いじめっ子と目標点との距離を求める
+                    DistanceToTarget = Vector3.SqrMagnitude(transform.position - TargetPosition);
+                    //目標点との距離が近ければ次の目標点を決める
+                    if (DistanceToTarget < CangeTargetDistance)
+                    {
+                        TargetPosition = GetPosition();
+
+                    }
+                    //目標点の方を向く
+                    TargetRotation = Quaternion.LookRotation(TargetPosition - transform.position);
+                    transform.rotation = Quaternion.Slerp(transform.rotation, TargetRotation, Time.deltaTime * 10);
+                    //前に進む
+                    transform.Translate(Vector3.forward * Speed * Time.deltaTime);
+                    time2--;
+                    //いじめられっ子との距離を計算し、近かったらいじめられっ子を目標点にして近寄る
+                    for (int i = 0; i < izimerarekko.Length; i++)
+                    {
+                        DistanceToTarget = Vector3.Distance(this.transform.position, izimerarekko[i].transform.position);
+                        if (DistanceToTarget <= 10.0f && time2 <= 0 && 2.0f < DistanceToTarget)
+                        {
+                            TargetPosition = izimerarekko[i].transform.position;
+                            time1 = 0;
+                            move_mode = move.izimerarekko;//いじめられっ子へ向かう
+                            break;
+                        }
+                    }
+                    break;
+                case move.izimerarekko://いじめられっ子へ向かう
+                    //目標点の方を向く
+                    TargetRotation = Quaternion.LookRotation(TargetPosition - transform.position);
+                    transform.rotation = Quaternion.Slerp(transform.rotation, TargetRotation, Time.deltaTime * 10);
+                    //前に進む
+                    transform.Translate(Vector3.forward * Speed * Time.deltaTime);
+                    //いじめられっ子に近づきすぎたらそれ以上すすめないようにする
+                    if (DistanceToTarget <= 5.0f)
+                    {
+                        this.transform.position = OldPosition;
+                    }
+
+                    if (time1 >= 600)
+                    {
+                        time2 = 600;
+                        TargetPosition = GetPosition();
+                        move_mode = move.loitering;//徘徊
+                        break;
+                    }
+                    break;
+
+                default:
+                    break;
+                   
+            }
+            time1++;
+        }else {
+            Destroy(this);
+        }
+    }
+    public Vector3 GetPosition()
+    {
+        return new Vector3(Random.Range(-18, 35), 2.0f, Random.Range(-14, 38));
+    }
+    protected void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("izimekko"))
+        {
+            if (move_mode == move.loitering)
+            {
+                TargetPosition = GetPosition();
+            }
+
+        }
+    }
+
+}
+
