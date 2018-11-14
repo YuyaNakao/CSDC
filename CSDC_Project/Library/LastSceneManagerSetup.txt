@@ -1,4 +1,4 @@
 sceneSetups:
-- path: D:/0.CSDC_Clone/Program/CSDC_Project/AllScenes/TitleScene/Scene/TitleScene.unity
+- path: Assets/Resorces/GameScene/Scenes/GameScene.unity
   isLoaded: 1
   isActive: 1
