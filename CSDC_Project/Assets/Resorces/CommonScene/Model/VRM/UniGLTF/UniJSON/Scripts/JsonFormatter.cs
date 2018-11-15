@@ -17,11 +17,6 @@ using UnityEngine;
 
 namespace UniJSON
 {
-    public class JsonFormatException : ArgumentException
-    {
-        public JsonFormatException(string msg) : base(msg) { }
-    }
-
     public class JsonFormatter
     {
         IStore m_w;
@@ -57,9 +52,9 @@ namespace UniJSON
             if (!string.IsNullOrEmpty(m_indent))
             {
                 m_w.Write('\n');
-                for (int i=0; i<m_stack.Count-1; ++i)
+                for (int i = 0; i < m_stack.Count - 1; ++i)
                 {
-                    m_w.Write(m_indent);                
+                    m_w.Write(m_indent);
                 }
             }
         }

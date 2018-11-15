@@ -61,6 +61,41 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Resorces\CommonScene\Classroom\PostProcessing\Editor\Attributes\PostProcessingModelEditorAttribute.cs" />
+    <Compile Include="Assets\Resorces\CommonScene\Classroom\PostProcessing\Editor\Models\AmbientOcclusionModelEditor.cs" />
+    <Compile Include="Assets\Resorces\CommonScene\Classroom\PostProcessing\Editor\Models\AntialiasingModelEditor.cs" />
+    <Compile Include="Assets\Resorces\CommonScene\Classroom\PostProcessing\Editor\Models\BloomModelEditor.cs" />
+    <Compile Include="Assets\Resorces\CommonScene\Classroom\PostProcessing\Editor\Models\BuiltinDebugViewsEditor.cs" />
+    <Compile Include="Assets\Resorces\CommonScene\Classroom\PostProcessing\Editor\Models\ChromaticAberrationEditor.cs" />
+    <Compile Include="Assets\Resorces\CommonScene\Classroom\PostProcessing\Editor\Models\ColorGradingModelEditor.cs" />
+    <Compile Include="Assets\Resorces\CommonScene\Classroom\PostProcessing\Editor\Models\DefaultPostFxModelEditor.cs" />
+    <Compile Include="Assets\Resorces\CommonScene\Classroom\PostProcessing\Editor\Models\DepthOfFieldModelEditor.cs" />
+    <Compile Include="Assets\Resorces\CommonScene\Classroom\PostProcessing\Editor\Models\DitheringModelEditor.cs" />
+    <Compile Include="Assets\Resorces\CommonScene\Classroom\PostProcessing\Editor\Models\EyeAdaptationModelEditor.cs" />
+    <Compile Include="Assets\Resorces\CommonScene\Classroom\PostProcessing\Editor\Models\FogModelEditor.cs" />
+    <Compile Include="Assets\Resorces\CommonScene\Classroom\PostProcessing\Editor\Models\GrainModelEditor.cs" />
+    <Compile Include="Assets\Resorces\CommonScene\Classroom\PostProcessing\Editor\Models\MotionBlurModelEditor.cs" />
+    <Compile Include="Assets\Resorces\CommonScene\Classroom\PostProcessing\Editor\Models\ScreenSpaceReflectionModelEditor.cs" />
+    <Compile Include="Assets\Resorces\CommonScene\Classroom\PostProcessing\Editor\Models\UserLutModelEditor.cs" />
+    <Compile Include="Assets\Resorces\CommonScene\Classroom\PostProcessing\Editor\Models\VignetteModelEditor.cs" />
+    <Compile Include="Assets\Resorces\CommonScene\Classroom\PostProcessing\Editor\Monitors\HistogramMonitor.cs" />
+    <Compile Include="Assets\Resorces\CommonScene\Classroom\PostProcessing\Editor\Monitors\ParadeMonitor.cs" />
+    <Compile Include="Assets\Resorces\CommonScene\Classroom\PostProcessing\Editor\Monitors\VectorscopeMonitor.cs" />
+    <Compile Include="Assets\Resorces\CommonScene\Classroom\PostProcessing\Editor\Monitors\WaveformMonitor.cs" />
+    <Compile Include="Assets\Resorces\CommonScene\Classroom\PostProcessing\Editor\PostProcessingBehaviourEditor.cs" />
+    <Compile Include="Assets\Resorces\CommonScene\Classroom\PostProcessing\Editor\PostProcessingFactory.cs" />
+    <Compile Include="Assets\Resorces\CommonScene\Classroom\PostProcessing\Editor\PostProcessingInspector.cs" />
+    <Compile Include="Assets\Resorces\CommonScene\Classroom\PostProcessing\Editor\PostProcessingModelEditor.cs" />
+    <Compile Include="Assets\Resorces\CommonScene\Classroom\PostProcessing\Editor\PostProcessingMonitor.cs" />
+    <Compile Include="Assets\Resorces\CommonScene\Classroom\PostProcessing\Editor\PropertyDrawers\GetSetDrawer.cs" />
+    <Compile Include="Assets\Resorces\CommonScene\Classroom\PostProcessing\Editor\PropertyDrawers\MinDrawer.cs" />
+    <Compile Include="Assets\Resorces\CommonScene\Classroom\PostProcessing\Editor\PropertyDrawers\TrackballGroupDrawer.cs" />
+    <Compile Include="Assets\Resorces\CommonScene\Classroom\PostProcessing\Editor\Utils\CurveEditor.cs" />
+    <Compile Include="Assets\Resorces\CommonScene\Classroom\PostProcessing\Editor\Utils\EditorGUIHelper.cs" />
+    <Compile Include="Assets\Resorces\CommonScene\Classroom\PostProcessing\Editor\Utils\EditorResources.cs" />
+    <Compile Include="Assets\Resorces\CommonScene\Classroom\PostProcessing\Editor\Utils\FxStyles.cs" />
+    <Compile Include="Assets\Resorces\CommonScene\Classroom\PostProcessing\Editor\Utils\ReflectionUtils.cs" />
+    <Compile Include="Assets\Resorces\CommonScene\Classroom\Scripts\Editor\ClockAnimInspector.cs" />
     <Compile Include="Assets\Resorces\CommonScene\Model\VRM\MToon\MToon\Editor\MToonInspector.cs" />
     <Compile Include="Assets\Resorces\CommonScene\Model\VRM\Scripts\BlendShape\Editor\BlendShapeAvatarEditor.cs" />
     <Compile Include="Assets\Resorces\CommonScene\Model\VRM\Scripts\BlendShape\Editor\BlendShapeClipEditor.cs" />
@@ -106,6 +141,19 @@
     <Compile Include="Assets\Resorces\CommonScene\Model\VRM\UniGLTF\UniUnlit\Editor\UniUnlitEditor.cs" />
     <Compile Include="Assets\Resorces\Standard Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
     <Compile Include="Assets\Resorces\TitleScene\Controller Tester\Scripts\Editor\TestGamepadEditor.cs" />
+    <Compile Include="Assets\VRM\Scripts\BlendShape\Editor\BlendShapeClipDrawer.cs" />
+    <Compile Include="Assets\VRM\Scripts\BlendShape\Editor\BlendShapeClipEditorHelper.cs" />
+    <Compile Include="Assets\VRM\Scripts\BlendShape\Editor\BlendShapeClipSelector.cs" />
+    <Compile Include="Assets\VRM\Scripts\BlendShape\Editor\SerializedBlendShapeClipEditor.cs" />
+    <Compile Include="Assets\VRM\UniGLTF\DepthFirstScheduler\Editor\DepthFirstScheduler.cs" />
+    <Compile Include="Assets\VRM\UniGLTF\UniHumanoid\Scripts\Editor\MuscleInspectorEditor.cs" />
+    <Compile Include="Assets\VRM\UniGLTF\UniJSON\Editor\Tests\MsgPack\ArrayTest.cs" />
+    <Compile Include="Assets\VRM\UniGLTF\UniJSON\Editor\Tests\MsgPack\BooleanTest.cs" />
+    <Compile Include="Assets\VRM\UniGLTF\UniJSON\Editor\Tests\MsgPack\FloatTest.cs" />
+    <Compile Include="Assets\VRM\UniGLTF\UniJSON\Editor\Tests\MsgPack\IntTest.cs" />
+    <Compile Include="Assets\VRM\UniGLTF\UniJSON\Editor\Tests\MsgPack\MapTest.cs" />
+    <Compile Include="Assets\VRM\UniGLTF\UniJSON\Editor\Tests\MsgPack\RawTest.cs" />
+    <Compile Include="Assets\VRM\UniGLTF\UniJSON\Editor\Tests\MsgPack\StringTest.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/0.CSDC_Clone/CSDC_Project/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
