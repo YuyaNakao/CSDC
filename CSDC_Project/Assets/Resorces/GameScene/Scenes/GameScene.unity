@@ -375,6 +375,30 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1899713383909254, guid: 058df58e20565704886645e96ef78257, type: 2}
+      propertyPath: m_TagString
+      value: Stage
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689441514013258, guid: 058df58e20565704886645e96ef78257, type: 2}
+      propertyPath: m_TagString
+      value: Stage
+      objectReference: {fileID: 0}
+    - target: {fileID: 1052026996580490, guid: 058df58e20565704886645e96ef78257, type: 2}
+      propertyPath: m_TagString
+      value: Stage
+      objectReference: {fileID: 0}
+    - target: {fileID: 1089080804431638, guid: 058df58e20565704886645e96ef78257, type: 2}
+      propertyPath: m_TagString
+      value: Stage
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875116938703234, guid: 058df58e20565704886645e96ef78257, type: 2}
+      propertyPath: m_TagString
+      value: Stage
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078094048973526, guid: 058df58e20565704886645e96ef78257, type: 2}
+      propertyPath: m_TagString
+      value: Stage
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 058df58e20565704886645e96ef78257, type: 2}
   m_IsPrefabAsset: 0
@@ -536,7 +560,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4083268816940594, guid: 0f2e427de4ba46f41a94350fb61d5e08, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 2.7
+      value: 2.763
       objectReference: {fileID: 0}
     - target: {fileID: 4083268816940594, guid: 0f2e427de4ba46f41a94350fb61d5e08, type: 2}
       propertyPath: m_LocalRotation.x
@@ -573,6 +597,10 @@ Prefab:
     - target: {fileID: 4083268816940594, guid: 0f2e427de4ba46f41a94350fb61d5e08, type: 2}
       propertyPath: m_LocalScale.z
       value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1218569274795328, guid: 0f2e427de4ba46f41a94350fb61d5e08, type: 2}
+      propertyPath: m_TagString
+      value: Stage
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f2e427de4ba46f41a94350fb61d5e08, type: 2}
@@ -686,6 +714,10 @@ Prefab:
     - target: {fileID: 4314947220542206, guid: 873dd54b57317eb478d8f7390b8b6504, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1771772304343808, guid: 873dd54b57317eb478d8f7390b8b6504, type: 2}
+      propertyPath: m_TagString
+      value: Stage
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 873dd54b57317eb478d8f7390b8b6504, type: 2}
@@ -1418,6 +1450,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1.6
       objectReference: {fileID: 0}
+    - target: {fileID: 1899404093907346, guid: a7c1ee82735f63c4586dc781f916eb95, type: 2}
+      propertyPath: m_TagString
+      value: Stage
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7c1ee82735f63c4586dc781f916eb95, type: 2}
   m_IsPrefabAsset: 0
@@ -1747,7 +1783,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4083268816940594, guid: 0f2e427de4ba46f41a94350fb61d5e08, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -2.63
+      value: -2.77
       objectReference: {fileID: 0}
     - target: {fileID: 4083268816940594, guid: 0f2e427de4ba46f41a94350fb61d5e08, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1788,6 +1824,10 @@ Prefab:
     - target: {fileID: 4083268816940594, guid: 0f2e427de4ba46f41a94350fb61d5e08, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1218569274795328, guid: 0f2e427de4ba46f41a94350fb61d5e08, type: 2}
+      propertyPath: m_TagString
+      value: Stage
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f2e427de4ba46f41a94350fb61d5e08, type: 2}
@@ -2458,7 +2498,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4952878412029372, guid: 153e759021f66ca40b418286ca824021, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.431
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 4952878412029372, guid: 153e759021f66ca40b418286ca824021, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2495,6 +2535,10 @@ Prefab:
     - target: {fileID: 4952878412029372, guid: 153e759021f66ca40b418286ca824021, type: 2}
       propertyPath: m_LocalScale.z
       value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083586594848904, guid: 153e759021f66ca40b418286ca824021, type: 2}
+      propertyPath: m_TagString
+      value: Stage
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 153e759021f66ca40b418286ca824021, type: 2}
@@ -3244,7 +3288,7 @@ GameObject:
   - component: {fileID: 1680599546}
   m_Layer: 0
   m_Name: Stage
-  m_TagString: Untagged
+  m_TagString: Stage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
