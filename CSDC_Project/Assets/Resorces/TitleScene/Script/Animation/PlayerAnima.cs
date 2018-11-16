@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
+
+// 作成者　松田
+
 public class PlayerAnima : MonoBehaviour
 {
     public TitleScene player;
