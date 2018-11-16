@@ -5,7 +5,7 @@ using GamepadInput;
 
 //　基底クラス
 public abstract class Status :MonoBehaviour{
-    public int hp;
+    public Vector3 pos;
     public float power;
     public float speed;
     public float chargespeed;

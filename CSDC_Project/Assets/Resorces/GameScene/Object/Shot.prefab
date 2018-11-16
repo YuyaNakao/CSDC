@@ -114,7 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetBeacon: {fileID: 1695856771682420, guid: 17190654251c7ec4cb000b51a5a458d1,
     type: 2}
-  speed: 1000
+  speed: 10
 --- !u!135 &135796102314874034
 SphereCollider:
   m_ObjectHideFlags: 1

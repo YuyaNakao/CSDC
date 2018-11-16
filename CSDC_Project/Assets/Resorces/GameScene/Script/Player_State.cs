@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿//
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using GamepadInput;
@@ -7,7 +8,7 @@ using GamepadInput;
 public class Player_State : MonoBehaviour {
     public GameObject obj_Shot;
     Vector3 move;//移動量
-    public float speed;
+    Vector3 direction; //向き
 
     //ステート管理
     public enum STATE {
@@ -50,34 +51,51 @@ public class Player_State : MonoBehaviour {
     //待機時の処理
     private void Wait()
     {
-        print("Wait");
-        var keyState = GamePad.GetState(playerStatus.playerNo);
 
-        m_state = STATE.RUN;
-
-        if (keyState.A)
+        GamepadState keyState = GamePad.GetState(playerStatus.playerNo);
+        if (GamePad.GetButtonDown(GamePad.Button.A, playerStatus.playerNo))
         {
             m_state = STATE.CHARGE;
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (keyState.LeftStickAxis.x>0.2f)
         {
-            m_state = STATE.CHARGE;
+            m_state = STATE.RUN;
+        }
+
+        if (keyState.LeftStickAxis.x <-0.2f)
+        {
+            m_state = STATE.RUN;
+        }
+
+        if (keyState.LeftStickAxis.y > 0.2f) { 
+            m_state = STATE.RUN;
+        }
+
+        if (keyState.LeftStickAxis.y <-0.2f)
+        {
+            m_state = STATE.RUN;
         }
     }
 
     //移動中の処理
     private void Run()
     {
-        print("Run");
         Move();
         m_state = STATE.WAIT;
+        GamepadState keyState = GamePad.GetState(playerStatus.playerNo);
+        if (GamePad.GetButtonDown(GamePad.Button.A, playerStatus.playerNo))
+        {
+            m_state = STATE.CHARGE;
+        }
+
+
     }
 
     //攻撃時の処理
     private void Attack()
     {
         // 弾を作成
-        GameObject obj =Instantiate(obj_Shot, this.transform.position, this.transform.rotation)as GameObject;
+        GameObject obj =Instantiate(obj_Shot,transform.position,transform.rotation)as GameObject;
         obj.name = obj_Shot.name;
         m_state = STATE.WAIT;
     }
@@ -86,15 +104,15 @@ public class Player_State : MonoBehaviour {
     private void Charge()
     {
         ChargeMove();
-        var keyState = GamePad.GetState(playerStatus.playerNo, false);
+        GamepadState keyState = GamePad.GetState(playerStatus.playerNo, false);
 
-        if (keyState.A)
+        if (GamePad.GetButtonUp(GamePad.Button.A, playerStatus.playerNo))
         {
             m_state = STATE.ATTACK;
         }
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            m_state = STATE.CHARGE;
+            m_state = STATE.ATTACK;
         }
     }
 
@@ -105,28 +123,24 @@ public class Player_State : MonoBehaviour {
     //通常時の移動
     public void Move()
     {
-        var keyState = GamePad.GetState(playerStatus.playerNo, false);
+        GamepadState keyState = GamePad.GetState(playerStatus.playerNo);
         //プレイヤー移動
         move.x = keyState.LeftStickAxis.x * playerStatus.speed * Time.deltaTime;
         move.z = keyState.LeftStickAxis.y * playerStatus.speed * Time.deltaTime;
 
-        Vector3 direction = new Vector3(move.x, move.y, move.z);
+        direction = new Vector3(move.x, move.y, move.z);
+        this.transform.Rotate(direction);
         m_character_controller.Move(direction);
 
         // 向きを変更
         transform.localRotation = Quaternion.LookRotation(direction);
     }
-
     //溜め中の移動
     public void ChargeMove()
     {
-
-    //    //プレイヤー移動
-    //    move.x = Input.GetAxis("Horizontal") * playerStatus.chargespeed;
-    //    move.z = Input.GetAxis("Vertical") * playerStatus.chargespeed;
-    //    Vector3 direction = new Vector3(move.x, move.y, move.z);
-    //    m_character_controller.Move(direction);
-    //    // 向きを変更
-    //    transform.localRotation = Quaternion.LookRotation(direction);
+        //移動量から向きを計算
+        //Vector3 diff = transform.position - playerStatus.pos;
+        // 向きを変更
+        transform.localRotation = Quaternion.LookRotation(direction);
     }
 }
