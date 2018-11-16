@@ -49,7 +49,7 @@ namespace VRM
             if (clip != null)
             {
                 ClearBlendShape();
-                //clip.Apply(m_target.transform, 1.0f);
+                clip.Apply(m_target.transform, 1.0f);
             }
 
             EditorGUILayout.Space();

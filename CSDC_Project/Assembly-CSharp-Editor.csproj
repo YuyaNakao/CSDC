@@ -141,6 +141,19 @@
     <Compile Include="Assets\Resorces\CommonScene\Model\VRM\UniGLTF\UniUnlit\Editor\UniUnlitEditor.cs" />
     <Compile Include="Assets\Resorces\Standard Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
     <Compile Include="Assets\Resorces\TitleScene\Controller Tester\Scripts\Editor\TestGamepadEditor.cs" />
+    <Compile Include="Assets\VRM\Scripts\BlendShape\Editor\BlendShapeClipDrawer.cs" />
+    <Compile Include="Assets\VRM\Scripts\BlendShape\Editor\BlendShapeClipEditorHelper.cs" />
+    <Compile Include="Assets\VRM\Scripts\BlendShape\Editor\BlendShapeClipSelector.cs" />
+    <Compile Include="Assets\VRM\Scripts\BlendShape\Editor\SerializedBlendShapeClipEditor.cs" />
+    <Compile Include="Assets\VRM\UniGLTF\DepthFirstScheduler\Editor\DepthFirstScheduler.cs" />
+    <Compile Include="Assets\VRM\UniGLTF\UniHumanoid\Scripts\Editor\MuscleInspectorEditor.cs" />
+    <Compile Include="Assets\VRM\UniGLTF\UniJSON\Editor\Tests\MsgPack\ArrayTest.cs" />
+    <Compile Include="Assets\VRM\UniGLTF\UniJSON\Editor\Tests\MsgPack\BooleanTest.cs" />
+    <Compile Include="Assets\VRM\UniGLTF\UniJSON\Editor\Tests\MsgPack\FloatTest.cs" />
+    <Compile Include="Assets\VRM\UniGLTF\UniJSON\Editor\Tests\MsgPack\IntTest.cs" />
+    <Compile Include="Assets\VRM\UniGLTF\UniJSON\Editor\Tests\MsgPack\MapTest.cs" />
+    <Compile Include="Assets\VRM\UniGLTF\UniJSON\Editor\Tests\MsgPack\RawTest.cs" />
+    <Compile Include="Assets\VRM\UniGLTF\UniJSON\Editor\Tests\MsgPack\StringTest.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/0.CSDC_Clone/CSDC_Project/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
