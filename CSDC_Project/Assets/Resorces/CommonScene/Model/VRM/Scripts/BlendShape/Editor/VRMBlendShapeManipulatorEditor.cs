@@ -49,7 +49,8 @@ namespace VRM
             if (clip != null)
             {
                 ClearBlendShape();
-//                clip.Apply(m_target.transform, 1.0f);
+                //ここ↓でエラー出る
+                //clip.Apply(m_target.transform, 1.0f);
             }
 
             EditorGUILayout.Space();

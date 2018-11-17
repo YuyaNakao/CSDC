@@ -14,15 +14,15 @@ public class Shot : MonoBehaviour {
     // Use this for initialization
     void Start () {
         rid = GetComponent<Rigidbody>();
-        targetBeacon = GameObject.Find("Beacon");
-        shot = GameObject.Find("Shot");
-        rid.AddForce(transform.forward * speed);
+
+
+        //rid.AddForce(transform.position * speed);
 
     }
 	
 	// Update is called once per frame
 	void Update () {
-
+        rid.velocity = transform.forward * speed;
 
     }
 

@@ -5,7 +5,6 @@
 using UnityEngine;
 using System.Collections;
 
-
 namespace GamepadInput
 {
 
@@ -79,8 +78,8 @@ namespace GamepadInput
             }
             catch (System.Exception e)
             {
-                //Debug.LogError(e);
-                //Debug.LogWarning("Have you set up all axes correctly? \nThe easiest solution is to replace the InputManager.asset with version located in the GamepadInput package. \nWarning: do so will overwrite any existing input");
+                Debug.LogError(e);
+                Debug.LogWarning("Have you set up all axes correctly? \nThe easiest solution is to replace the InputManager.asset with version located in the GamepadInput package. \nWarning: do so will overwrite any existing input");
             }
             return axisXY;
         }
@@ -105,8 +104,8 @@ namespace GamepadInput
             }
             catch (System.Exception e)
             {
-                //Debug.LogError(e);
-                //Debug.LogWarning("Have you set up all axes correctly? \nThe easiest solution is to replace the InputManager.asset with version located in the GamepadInput package. \nWarning: do so will overwrite any existing input");
+                Debug.LogError(e);
+                Debug.LogWarning("Have you set up all axes correctly? \nThe easiest solution is to replace the InputManager.asset with version located in the GamepadInput package. \nWarning: do so will overwrite any existing input");
             }
             return axis;
         }
