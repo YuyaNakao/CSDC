@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 
+// 作成者　松田
+
 public class TitleScene : MonoBehaviour
 {
     // 参加人数のカウント
