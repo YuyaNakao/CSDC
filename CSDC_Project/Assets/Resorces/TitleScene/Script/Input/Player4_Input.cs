@@ -15,11 +15,16 @@ public class Player4_Input : MonoBehaviour
     // プレイヤーのステータス
     private bool player4_changeflg = false;
 
+    private bool player4_button_push = false;
+
+    private AudioSource AudioSource;
+
     // Use this for initialization
     void Start()
     {
         Render = gameObject.GetComponent<SpriteRenderer>();
         Render.sprite = sprite_wait;
+        AudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -36,6 +41,11 @@ public class Player4_Input : MonoBehaviour
         {
             // プレイヤー４の状態をスタートにする。
             Render.sprite = sprite_start;
+            if (player4_button_push == false)
+            {
+                AudioSource.Play();
+                player4_button_push = true;
+            }
         }
         else
         {
