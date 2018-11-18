@@ -164,5 +164,3 @@ C:\Users\lizeb\OneDrive\ドキュメント\CSDC\CSDC_Project\Temp\bin\Debug\Unit
 C:\Users\lizeb\OneDrive\ドキュメント\CSDC\CSDC_Project\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 C:\Users\lizeb\OneDrive\ドキュメント\CSDC\CSDC_Project\obj\Debug\Assembly-CSharp.dll
 C:\Users\lizeb\OneDrive\ドキュメント\CSDC\CSDC_Project\obj\Debug\Assembly-CSharp.pdb
-C:\Users\lizeb\OneDrive\ドキュメント\CSDC\CSDC_Project\Temp\bin\Debug\UnityEditor.UI.dll
-C:\Users\lizeb\OneDrive\ドキュメント\CSDC\CSDC_Project\Temp\bin\Debug\UnityEditor.UI.xml
