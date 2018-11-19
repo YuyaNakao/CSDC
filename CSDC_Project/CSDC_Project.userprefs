@@ -1,0 +1,14 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resorces\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\StandaloneInput.cs">
+    <Files>
+      <File FileName="Assets\Resorces\CommonScene\Model\MotionController.cs" Line="33" Column="41" />
+      <File FileName="Assets\Resorces\CommonScene\Model\MotionTest.cs" Line="29" Column="13" />
+      <File FileName="Assets\Resorces\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\StandaloneInput.cs" Line="10" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
