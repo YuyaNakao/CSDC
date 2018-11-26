@@ -69,7 +69,7 @@ public class CameraScript : MonoBehaviour
 
         if(StartTime <= 5)
         {
-            Camera_Endmove();
+//            Camera_Endmove();
         }
 
         // 時間が０になった時

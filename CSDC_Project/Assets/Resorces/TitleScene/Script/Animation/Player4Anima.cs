@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// 作成者　松田
 public class Player4Anima : MonoBehaviour
 {
 
@@ -36,6 +37,7 @@ public class Player4Anima : MonoBehaviour
         {
             // 待機モーションに入る
             this.animator.SetBool(key_isStandup, true);
+            this.animator.SetBool(setting_flg, false);
             if (flg == false)
             {
                 // プレイヤーの参加人数を加える

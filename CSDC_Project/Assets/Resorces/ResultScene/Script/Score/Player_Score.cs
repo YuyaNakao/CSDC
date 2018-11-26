@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// 作成者　松田
 public class Player_Score : MonoBehaviour
 {
     private float move_score;       // スコアの移動量
@@ -23,18 +24,6 @@ public class Player_Score : MonoBehaviour
     private GameObject player;      // それぞれのプレイヤーオブジェクト
 
     [SerializeField]
-    private int number;
-
-    [SerializeField]
-    int numbers1;
-    [SerializeField]
-    int numbers2;
-    [SerializeField]
-    int numbers3;
-    [SerializeField]
-    int numbers4;
-
-    [SerializeField]
     private float StartTime;                // 何秒後に開始
 
     private Vector3 py;//Y座標一時保管
@@ -47,7 +36,6 @@ public class Player_Score : MonoBehaviour
         // 移動量の初期値
         move_score = 0;
         py = init_position;
-
     }
 
     // Update is called once per frame
@@ -81,7 +69,6 @@ public class Player_Score : MonoBehaviour
             py.y = move_score / 2 + init_position.y;
 
             player.transform.position = (new Vector3(x, py.y, z));
-
         }
     }
 }

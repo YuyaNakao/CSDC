@@ -1602,7 +1602,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4630236682366456, guid: cbcad0acb766f784080b18c06c02d895, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.24513817
+      value: -0.25
       objectReference: {fileID: 0}
     - target: {fileID: 4630236682366456, guid: cbcad0acb766f784080b18c06c02d895, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1610,7 +1610,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4630236682366456, guid: cbcad0acb766f784080b18c06c02d895, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 4.6813374
+      value: 4.43
       objectReference: {fileID: 0}
     - target: {fileID: 4630236682366456, guid: cbcad0acb766f784080b18c06c02d895, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1910,7 +1910,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 334087307}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 843c93e202f7d3a4889da8f3d0e3775d, type: 3}
+  m_Script: {fileID: 11500000, guid: 196ac0d7b6fa7c84c9a08f25ef91f5ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   init_position: {x: -0.605, y: 0.762, z: -5.335}
@@ -1918,11 +1918,6 @@ MonoBehaviour:
   z: -5.335
   player_score: 10
   player: {fileID: 334087307}
-  number: 2
-  numbers1: 0
-  numbers2: 0
-  numbers3: 0
-  numbers4: 0
   StartTime: 5
 --- !u!4 &335761668 stripped
 Transform:
@@ -4517,7 +4512,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 835731109}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 843c93e202f7d3a4889da8f3d0e3775d, type: 3}
+  m_Script: {fileID: 11500000, guid: f03c99ac89bb90940b7b6d355677059c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   init_position: {x: 0.7699999, y: 0.762, z: -5.335}
@@ -4525,11 +4520,6 @@ MonoBehaviour:
   z: -5.335
   player_score: 3
   player: {fileID: 835731109}
-  number: 4
-  numbers1: 0
-  numbers2: 0
-  numbers3: 0
-  numbers4: 0
   StartTime: 5
 --- !u!1001 &837449402
 Prefab:
@@ -5022,7 +5012,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 933358443}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 843c93e202f7d3a4889da8f3d0e3775d, type: 3}
+  m_Script: {fileID: 11500000, guid: 765602f8db82cbd4db5e0f4abf8d5881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   init_position: {x: 0.12, y: 0.762, z: -5.335}
@@ -5030,11 +5020,6 @@ MonoBehaviour:
   z: -5.335
   player_score: 5
   player: {fileID: 933358443}
-  number: 3
-  numbers1: 0
-  numbers2: 0
-  numbers3: 0
-  numbers4: 0
   StartTime: 5
 --- !u!1001 &934035175
 Prefab:
@@ -8696,11 +8681,6 @@ MonoBehaviour:
   z: -5.335
   player_score: 100
   player: {fileID: 1552570867}
-  number: 1
-  numbers1: 0
-  numbers2: 0
-  numbers3: 0
-  numbers4: 0
   StartTime: 5
 --- !u!65 &1552570869
 BoxCollider:

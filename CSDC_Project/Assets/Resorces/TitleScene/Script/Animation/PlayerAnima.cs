@@ -37,8 +37,9 @@ public class PlayerAnima : MonoBehaviour
         if (Input.GetButtonDown("Player1_Kettei"))
         {
             // 待機モーションに入る
-            this.animator.SetBool(key_isStandup, true); 
-            if(flg == false)
+            this.animator.SetBool(key_isStandup, true);
+            this.animator.SetBool(setting_flg, false);
+            if (flg == false)
             {
                 // プレイヤーの参加人数を加える
                 player.sanka_count+=1;

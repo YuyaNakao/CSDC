@@ -34,6 +34,7 @@ public class Player2Anima : MonoBehaviour
         {
             // 待機モーションに入る
             this.animator.SetBool(key_isStandup, true);
+            this.animator.SetBool(setting_flg, false);
             if (flg == false)
             {
                 // プレイヤーの参加人数を加える
