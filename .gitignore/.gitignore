@@ -4,7 +4,7 @@
 Temp/
 Obj/
 UnityGenerated/
-../CSDC_Project/Library/*
+Library/
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #

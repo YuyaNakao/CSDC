@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Resorces/CommonScene/Model/AnimatorTest.unity
+  isLoaded: 1
+  isActive: 1

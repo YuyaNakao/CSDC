@@ -128,7 +128,7 @@ public class Player_State : MonoBehaviour {
         move.x = keyState.LeftStickAxis.x * playerStatus.speed * Time.deltaTime;
         move.z = keyState.LeftStickAxis.y * playerStatus.speed * Time.deltaTime;
 
-        direction = new Vector3(-move.z, move.y, move.x);
+        direction = new Vector3(move.x, move.y, move.z);
         this.transform.Rotate(direction);
         m_character_controller.Move(direction);
 
