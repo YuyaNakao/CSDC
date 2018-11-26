@@ -397,6 +397,7 @@ MonoBehaviour:
   power: 0
   speed: 20
   chargespeed: 0
+  point: 0
   maxShot: 0
   playerNo: 3
 --- !u!114 &82999232
@@ -1129,7 +1130,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 71aa2926544da4044af9e364b9e3ee76, type: 3}
+  m_Sprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2006,6 +2007,7 @@ MonoBehaviour:
   power: 0
   speed: 20
   chargespeed: 0
+  point: 0
   maxShot: 0
   playerNo: 2
 --- !u!1 &534669902
@@ -2491,16 +2493,16 @@ MonoBehaviour:
   m_minute: 3
   m_second: 0
   m_timer_sprites:
-  - {fileID: 21300000, guid: 3dea5c9b9b752094e853440e81957bb7, type: 3}
-  - {fileID: 21300000, guid: 5247381f34e0035459cb2c8e27bb8223, type: 3}
-  - {fileID: 21300000, guid: 8b0ffafe054344f45bebd0acfd7d5b46, type: 3}
-  - {fileID: 21300000, guid: 10ba8d3596fa58d4592d720ae81ddf11, type: 3}
-  - {fileID: 21300000, guid: 115b08bfc64cb7d4088dd91fce33cd2e, type: 3}
-  - {fileID: 21300000, guid: a1af0bf643ae1e64988bbb1144b8cce9, type: 3}
-  - {fileID: 21300000, guid: 7df1c85ba94930e4da42056974ac7313, type: 3}
-  - {fileID: 21300000, guid: d881de2686983b84c9fe959f00fadb03, type: 3}
-  - {fileID: 21300000, guid: ac79e4f882693a24b90de79a9e05c591, type: 3}
-  - {fileID: 21300000, guid: c0083bf9329a56a41b2e9689b70ad351, type: 3}
+  - {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &654988326
 GameObject:
   m_ObjectHideFlags: 0
@@ -5122,6 +5124,7 @@ MonoBehaviour:
   power: 0
   speed: 20
   chargespeed: 0
+  point: 0
   maxShot: 0
   playerNo: 4
 --- !u!114 &1766477480
@@ -5617,6 +5620,7 @@ MonoBehaviour:
   power: 0
   speed: 20
   chargespeed: 0
+  point: 0
   maxShot: 0
   playerNo: 1
 --- !u!114 &1893611419

@@ -9,8 +9,11 @@ public abstract class Status :MonoBehaviour{
     public float power;
     public float speed;
     public float chargespeed;
-    public static int point;
+    public int point;
     public int maxShot;
     public GamePad.Index playerNo;
+
+
+    abstract public float ChargePower();
 
 }
