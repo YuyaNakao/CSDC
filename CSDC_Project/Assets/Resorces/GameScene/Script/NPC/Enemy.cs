@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+
     void OnTriggerEnter(Collider hit)
     {
         if (hit.CompareTag("Shot"))
         {
             this.transform.parent = hit.gameObject.transform;
+            
             Destroy(hit.gameObject.transform.root.gameObject);
         }
     }
