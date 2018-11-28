@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Resorces/CommonScene/Model/AnimatorTest.unity
+- path: Assets/Resorces/GameScene/Scenes/GameScene.unity
   isLoaded: 1
   isActive: 1
