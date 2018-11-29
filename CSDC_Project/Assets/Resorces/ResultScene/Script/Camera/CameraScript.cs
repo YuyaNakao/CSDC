@@ -69,14 +69,17 @@ public class CameraScript : MonoBehaviour
 
         if(StartTime <= 5)
         {
-            Camera_Endmove();
+//            Camera_Endmove();
         }
 
         // 時間が０になった時
         if(StartTime < 0)
         {
-            // タイトルへシーンが遷移する。
-            Fade.FadeOut(0);
+            if(Input.GetButtonDown("Player1_Kettei"))
+            {
+                // タイトルへシーンが遷移する。
+                Fade.FadeOut(0);
+            }            
         }
 
     }
