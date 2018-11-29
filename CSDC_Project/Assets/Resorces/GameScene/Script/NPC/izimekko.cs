@@ -3,45 +3,51 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class izimekko : MonoBehaviour{
+    public float max_x = 0.0f;//x軸への行動範囲(最大値)
+    public float min_x = 0.0f;//x軸への行動範囲(最小値)
+    public float max_z = 0.0f;//z軸への行動範囲(最大値)
+    public float min_z = 0.0f;//z軸への行動範囲(最小値)
     public int izimepower;//イジメパワー
     public float Speed = 5.0f;//移動量
     private Vector3 TargetPosition;//目標点
-    private Vector3 OldPosition;
+    [SerializeField]
     private float CangeTargetDistance = 1.0f;//この数値より近ければ次の目標点を決める
     private GameObject[] izimerarekko;//いじめられっ子タグからのデータを入れるゲームオブジェクト
     private GameObject targetizimerarekko;//追いかけ対象のいじめられっ子
     private GameObject izimekko_l;//いじめっ子リーダータグからのデータを入れるゲームオブジェクト
     private GameObject[] hutuunoko;//普通の子タグからのデータを入れるゲームオブジェクト
     private Rigidbody rigid;
-    private int time1, time2 ,time3,time4,time5;//状態遷移に使用する関数
+    private int change_move_time=0;//状態遷移に使用する変数
+    private int overlooking_time=0;//srachi時に使用する変数
     private Vector3 tmpvec;
     float srach_angle = 4.0f;
    
     public enum move {
-        loitering,
-        sarchi,
-        izimerarekko,
-        izimekko_L,
-        izime,
-        stop,
+        loitering,      //徘徊
+        sarchi,         //その場でキョロキョロする
+        izimerarekko,   //いじめられっ子を追いかける
+        izimekko_L,     //いじめっ子リーダーに付きまとう
+        izime,          //いじめっこをいじめる
+        stop,           //その場でとどまる
     }
-    move move_mode;
+    public move move_mode= move.loitering;
     void Start(){
         //初期位置設定
-        this.transform.position = GetPosition();
+        this.transform.position = new Vector3(Random.Range(-22, 22), 0, Random.Range(-22, 22));
+        //イジメパワー設定
         izimepower = 30;
         //最初の目標点を決める
         TargetPosition = GetPosition();
-        //初期状態設定
-        move_mode = move.loitering;
+        
     }
 
     void Update()
     {
+
+        this.transform.position = new Vector3(this.transform.position.x, 0.5f, this.transform.position.z);
         float DistanceToTarget = 0.0f;//目標点との距離
         Quaternion TargetRotation;//目標点への方向
         DistanceToTarget = Vector3.Distance(this.transform.position, TargetPosition);//いじめられっ子への距離を計算
-        OldPosition = this.transform.position;
         //いじめられっ子のデータを取得
         izimerarekko = GameObject.FindGameObjectsWithTag("izimerarekko");
         //いじめ子リーダーのデータを取得
@@ -58,7 +64,7 @@ public class izimekko : MonoBehaviour{
                     //目標点との距離が近ければ、その場でキョロキョロする動きをする
                    if (DistanceToTarget < CangeTargetDistance)
                     {
-                       time3 = 0;
+                       change_move_time = 0;
                        move_mode = move.sarchi;
                        break;
                     }
@@ -66,37 +72,43 @@ public class izimekko : MonoBehaviour{
                     TargetRotation = Quaternion.LookRotation(TargetPosition - transform.position);
                     transform.rotation = Quaternion.Slerp(transform.rotation, TargetRotation, Time.deltaTime * 2);
                     //前に進む
-                    transform.Translate(Vector3.forward * Speed * Time.deltaTime);
-                    time2--;
+                    object_move(this.transform.position,Speed);
+ 
+                    change_move_time--;
                     //いじめられっ子が視界内にいるか
-                    if (srachizimerarekko() == true && time2 <= 0){
-                        time1 = 0;
+                    if (srachizimerarekko() == true && change_move_time <= 0)
+                    {
+                        change_move_time = 0;
                         move_mode = move.izimerarekko;
                         break;
                     }
                     float izimekko_Ldis = 0.0f;//いじめっ子リーダーとの距離
-                    //izimekko_Ldis = Vector3.Distance(this.transform.position, izimekko_l.transform.position);
-                    if (izimekko_Ldis < 20.0f){
+                    izimekko_Ldis = Vector3.Distance(this.transform.position, izimekko_l.transform.position);
+                    if (izimekko_Ldis < 3.0f){
+                        //change_move_time = 0;
                         //move_mode = move.izimekko_L;
-                        break;
+                        //break;
                     }
                     break;
                 case move.sarchi://動かずにキョロキョロする
-                    time4++;
-                    if(time4>=50){
-                        time4 = 0;
+                    overlooking_time++;
+                    if (overlooking_time >= 50)
+                    {
+                        overlooking_time = 0;
                         srach_angle *= -1.0f;
                     }
                     transform.Rotate(new Vector3(0.0f,srach_angle,0.0f));
-                    time3++;
-                    if (time3 >= 600) {//10秒経過したら探索に遷移
+                    change_move_time++;
+                    if (change_move_time >= 600)
+                    {//10秒経過したら探索に遷移
                         TargetPosition = GetPosition();
                         move_mode = move.loitering;
                         break;
                     }
                     //いじめられっ子が視界内にいるか
-                    if (srachizimerarekko() == true && time2 <= 0){
-                        time1 = 0;
+                    if (srachizimerarekko() == true && change_move_time<= 0)
+                    {
+                        change_move_time = 0;
                         move_mode = move.izimerarekko;
                         break;
                     }
@@ -105,11 +117,12 @@ public class izimekko : MonoBehaviour{
                     //目標点(いじめられっ子)の方を向く
                     TargetRotation = Quaternion.LookRotation(targetizimerarekko.transform.position - transform.position);
                     transform.rotation = Quaternion.Slerp(transform.rotation, TargetRotation, Time.deltaTime * 10);
-                    //目標点(いじめられっ子)に進む
-                    transform.Translate(Vector3.forward * Speed * 1.5f * Time.deltaTime);
+                    
+                    //前に進む
+                    object_move(this.transform.position, Speed*1.5f);
                     //視界からいじめられっ子がいなくなると立ち止まる
                     if (srachizimerarekko() == false){
-                         time5=0;
+                         change_move_time = 0;
                          move_mode = move.stop;
                          break;
                     }
@@ -128,13 +141,13 @@ public class izimekko : MonoBehaviour{
                             m_izimerarekko2.izimekko_count();
                             break;
                         }
-           
-
+                        change_move_time = 0;
                         move_mode = move.izime;
                     }
-                    time1++;
-                    if (time1 >= 300){
-                        time2 = 300;
+                    change_move_time++;
+                    if (change_move_time >= 300)
+                    {
+                        change_move_time = 300;
                         TargetPosition = GetPosition();
                         move_mode = move.loitering;//徘徊
                         break;
@@ -145,21 +158,34 @@ public class izimekko : MonoBehaviour{
                     TargetRotation = Quaternion.LookRotation(izimekko_l.transform.position - transform.position);
                     transform.rotation = Quaternion.Slerp(transform.rotation, TargetRotation, Time.deltaTime * 2);
                     //目標点(いじめっ子リーダー)に進む
-                    transform.Translate(Vector3.forward * Speed * Time.deltaTime);
+                    object_move(this.transform.position, Speed);
+                    change_move_time++;
+                        if(change_move_time>=600){
+                            move_mode=move.loitering;
+                            break;
+                        }
                     break;
                 case move.izime:
+                    change_move_time++;
+                    if (change_move_time >= 150)
+                    {
+                        change_move_time = 0;
+                        move_mode = move.loitering;
+                        break;
+                    }
                     break;
                 case move.stop:
-                    time5++;
-                    if (time5 > 120){
-                        time1 = 0;
+                    change_move_time++;
+                    if (change_move_time > 120)
+                    {
+                        change_move_time = 0;
                         move_mode = move.loitering;
                         break;
                     }
                     //いじめられっ子が視界内にいるか
                     if (srachizimerarekko() == true)
                     {
-                        time1 = 0;
+                        change_move_time = 0;
                         move_mode = move.izimerarekko;
                         break;
                     }
@@ -171,11 +197,20 @@ public class izimekko : MonoBehaviour{
             Destroy(this);
         }
         Objectcollision();
-        Debug.Log(move_mode);
     }
     public Vector3 GetPosition(){
-        return new Vector3(Random.Range(-18, 35), 2.0f, Random.Range(-14, 38));
+        return new Vector3(Random.Range(-22, 22), 0, Random.Range(-22, 22));//xとｚで-22～22までのランダムな地点を設定する
     }
+
+    public void object_move(Vector3 position,float speed){
+        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        if (position.x <= min_x || max_x <= position.x || position.z <= min_z || max_z <= position.z)
+        {
+            transform.Translate(Vector3.forward *- speed * Time.deltaTime);
+        }
+   
+    }
+
     protected void OnCollisionStay(Collision collision){
         if (collision.gameObject.CompareTag("izimekko")){
                 transform.Translate(Vector3.forward * -Speed * 1.5f * Time.deltaTime);

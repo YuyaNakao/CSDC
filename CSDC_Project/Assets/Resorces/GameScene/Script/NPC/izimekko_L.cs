@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class izimekko_L : MonoBehaviour {
+    public float max_x = 0.0f;//x軸への行動範囲(最大値)
+    public float min_x = 0.0f;//x軸への行動範囲(最小値)
+    public float max_z = 0.0f;//z軸への行動範囲(最大値)
+    public float min_z = 0.0f;//z軸への行動範囲(最小値)
     public int izimepower;//イジメパワー
     public float Speed = 5.0f;//移動量
     private Vector3 TargetPosition;//目標点
@@ -20,21 +24,25 @@ public class izimekko_L : MonoBehaviour {
     void Start()
     {
         //初期位置設定
-        this.transform.position = GetPosition();
+        this.transform.position = new Vector3(Random.Range(-22, 22), 0, Random.Range(-22, 22));
         izimepower = 60;
         //最初の目標点を決める
         TargetPosition = GetPosition();
         //いじめられっ子のデータを取得
         izimerarekko = GameObject.FindGameObjectsWithTag("izimerarekko");
         //慣性をなくす
+        rigid = GetComponent<Rigidbody>();
         
     }
     void Update()
     {
+        this.transform.position = new Vector3(this.transform.position.x, 0.5f, this.transform.position.z);
         float DistanceToTarget = 0.0f;//目標点との距離
         Quaternion TargetRotation;//目標手への方向
         DistanceToTarget = Vector3.Distance(this.transform.position, TargetPosition);//いじめられっ子への距離を計算
         OldPosition = this.transform.position;
+        rigid.velocity = Vector3.zero;
+        rigid.angularVelocity = Vector3.zero;
         if (izimepower >= 0)
         {
             switch (move_mode)
@@ -99,7 +107,7 @@ public class izimekko_L : MonoBehaviour {
     }
     public Vector3 GetPosition()
     {
-        return new Vector3(Random.Range(-18, 35), 2.0f, Random.Range(-14, 38));
+        return new Vector3(Random.Range(-22, 22), 0, Random.Range(-22, 22));//xとｚで-22～22までのランダムな地点を設定する
     }
     protected void OnCollisionEnter(Collision collision)
     {
