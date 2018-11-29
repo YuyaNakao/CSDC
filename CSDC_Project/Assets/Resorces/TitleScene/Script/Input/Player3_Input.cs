@@ -1,10 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
+// 制作者：松田
 public class Player3_Input : MonoBehaviour
 {
     SpriteRenderer Render;
+
+    private Image image;
 
     // プレイヤー待機のスプレイと画像
     public Sprite sprite_wait;
@@ -22,8 +26,10 @@ public class Player3_Input : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Render = gameObject.GetComponent<SpriteRenderer>();
-        Render.sprite = sprite_wait;
+        // 画像の読み込み
+        image = GetComponent<Image>();
+        image.sprite = sprite_wait;
+
         AudioSource = GetComponent<AudioSource>();
     }
 
@@ -40,7 +46,7 @@ public class Player3_Input : MonoBehaviour
         if (player3_changeflg == true)
         {
             // プレイヤー３の状態をスタートにする。
-            Render.sprite = sprite_start;
+            image.sprite = sprite_start;
             if (player3_button_push == false)
             {
                 AudioSource.Play();
@@ -50,7 +56,7 @@ public class Player3_Input : MonoBehaviour
         else
         {
             // プレイヤー３の状態を待機。
-            Render.sprite = sprite_wait;
+            image.sprite = sprite_wait;
         }
         // ＰＳ４のコントローラーの○ボタンもしくはキーボードの３ボタンを押している時
         if (Input.GetButtonDown("Player3_Kettei"))

@@ -10,6 +10,8 @@ public class Push_Start : MonoBehaviour
 
     private Renderer renderer;
 
+    private Image image;
+
     [SerializeField]
     private float StartTime;
     
@@ -17,7 +19,9 @@ public class Push_Start : MonoBehaviour
     void Start ()
     {
         renderer = GetComponent<Renderer>();
-        renderer.enabled = false;
+
+        image = GetComponent<Image>();
+        image.enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -29,7 +33,8 @@ public class Push_Start : MonoBehaviour
             StartTime -= Time.deltaTime;
             if(StartTime < 0)
             {
-                renderer.enabled = true;
+                // 画像表示
+                image.enabled = true;
             }
         }
 	}
