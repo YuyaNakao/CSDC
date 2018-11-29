@@ -32,6 +32,7 @@ public class Player2Anima : MonoBehaviour
         // ＰＳ４のコントローラーの○ボタンもしくはキーボードの２ボタンを押している時
         if (Input.GetButtonDown("Player2_Kettei"))
         {
+            this.animator.SetBool(setting_flg, false);
             // 待機モーションに入る
             this.animator.SetBool(key_isStandup, true);
             if (flg == false)

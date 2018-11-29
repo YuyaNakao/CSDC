@@ -382,6 +382,7 @@
      <Compile Include="Assets\Resorces\TitleScene\Script\Input\Player3_Input.cs" />
      <Compile Include="Assets\Resorces\TitleScene\Script\Input\Player4_Input.cs" />
      <Compile Include="Assets\Resorces\TitleScene\Script\Input\PlayerInput.cs" />
+     <Compile Include="Assets\Resorces\TitleScene\Script\Input\Push_Start.cs" />
      <Compile Include="Assets\Resorces\TitleScene\UnityChan\Scripts\CameraController.cs" />
      <Compile Include="Assets\Resorces\TitleScene\UnityChan\Scripts\FaceUpdate.cs" />
      <Compile Include="Assets\Resorces\TitleScene\UnityChan\Scripts\IdleChanger.cs" />

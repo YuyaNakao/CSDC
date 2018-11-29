@@ -34,6 +34,7 @@ public class Player3Anima : MonoBehaviour
         if (Input.GetButtonDown("Player3_Kettei"))
         {
             // 待機モーションに入る
+            this.animator.SetBool(setting_flg, false);
             this.animator.SetBool(key_isStandup, true);
             if (flg == false)
             {

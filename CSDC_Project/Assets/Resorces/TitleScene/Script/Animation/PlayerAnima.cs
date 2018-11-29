@@ -22,6 +22,9 @@ public class PlayerAnima : MonoBehaviour
     // 待機フラグ
     private const string setting_flg = "settingFlg";
 
+    [SerializeField]
+    private float StartTime;
+
     // Use this for initialization
     void Start ()
     {
@@ -36,6 +39,7 @@ public class PlayerAnima : MonoBehaviour
         // ＰＳ４のコントローラーの○ボタンもしくはキーボードの１ボタンを押している時
         if (Input.GetButtonDown("Player1_Kettei"))
         {
+            this.animator.SetBool(setting_flg, false);
             // 待機モーションに入る
             this.animator.SetBool(key_isStandup, true); 
             if(flg == false)
@@ -50,9 +54,14 @@ public class PlayerAnima : MonoBehaviour
         
         if(player.sanka_count == 4)
         {
-            if (Input.GetButtonDown("Player1_Kettei"))
+            // 時間経過処理
+            StartTime -= Time.deltaTime;
+            if(StartTime < 0)
             {
-                player.fade_flg = true;
+                if (Input.GetButtonDown("Player1_Kettei"))
+                {
+                    player.fade_flg = true;
+                }
             }
         }
         
