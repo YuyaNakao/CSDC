@@ -44,7 +44,6 @@ public class Player2Anima : MonoBehaviour
 
         // 全員の参加を確認後、Player2の参加フラグをfalseにして
         // 再度ゲームの申し込みをできるようにする
-        
         if (player.fade_flg == true)
         {
             flg = false;

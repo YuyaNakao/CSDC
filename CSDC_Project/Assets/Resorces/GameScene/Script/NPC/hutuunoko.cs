@@ -87,7 +87,7 @@ public class hutuunoko : MonoBehaviour {
                     break;
             }
             Objectcollision();
-            Debug.Log("普通の子がいじめを受けている数"+izimekko_suu);
+            //Debug.Log("普通の子がいじめを受けている数"+izimekko_suu);
     }
     public Vector3 GetPosition(){
         return new Vector3(Random.Range(-18, 35), 2.0f, Random.Range(-14, 38));

@@ -171,7 +171,7 @@ public class izimekko : MonoBehaviour{
             Destroy(this);
         }
         Objectcollision();
-        Debug.Log(move_mode);
+        //Debug.Log(move_mode);
     }
     public Vector3 GetPosition(){
         return new Vector3(Random.Range(-18, 35), 2.0f, Random.Range(-14, 38));
