@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// 制作者：松田
 public class Player_Score : MonoBehaviour
 {
     private float move_score;       // スコアの移動量
@@ -38,12 +39,15 @@ public class Player_Score : MonoBehaviour
     private float StartTime;                // 何秒後に開始
 
     private Vector3 py;//Y座標一時保管
+    ScoreManager manager;
 
     // Use this for initialization
     void Start()
     {
+        manager = GameObject.Find("Score").GetComponent<ScoreManager>();
+        
         // オブジェクトのスケールサイズが大きくなるので調整する
-        player_max_move = player_score / 40;
+        player_max_move = manager.score[0] / 40;
         // 移動量の初期値
         move_score = 0;
         py = init_position;

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -203,7 +203,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &48189012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,9 +215,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11577edcc2d1c94a813b2ae4327a342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 5
-  meshcolor: {fileID: 0}
-  izimekko_suu: 0
 --- !u!65 &48189013
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -472,8 +469,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94048ee17eb90194fbd4bfa4d5da06a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  izimepower: 0
-  Speed: 5
 --- !u!114 &83028174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -799,8 +794,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94048ee17eb90194fbd4bfa4d5da06a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  izimepower: 0
-  Speed: 5
 --- !u!114 &257212592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1247,8 +1240,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94048ee17eb90194fbd4bfa4d5da06a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  izimepower: 0
-  Speed: 5
 --- !u!114 &381566167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1374,8 +1365,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94048ee17eb90194fbd4bfa4d5da06a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  izimepower: 0
-  Speed: 5
 --- !u!114 &382007457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1571,9 +1560,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11577edcc2d1c94a813b2ae4327a342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 5
-  meshcolor: {fileID: 0}
-  izimekko_suu: 0
 --- !u!65 &414136761
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1688,8 +1674,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94048ee17eb90194fbd4bfa4d5da06a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  izimepower: 0
-  Speed: 5
 --- !u!114 &449097272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2116,13 +2100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c80cc84d43d663c49bc09ffd77a4ff6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  izimepower: 0
-  Speed: 5
-  izimekko_suu: 0
-  meshcolor: {fileID: 0}
-  move_mode: 0
-  move_mode_izimekko: 0
-  move_mode_izimerarekko: 0
 --- !u!65 &551163923
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2236,9 +2213,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11577edcc2d1c94a813b2ae4327a342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 5
-  meshcolor: {fileID: 0}
-  izimekko_suu: 0
 --- !u!65 &569066212
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2340,7 +2314,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &574050127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2352,9 +2326,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11577edcc2d1c94a813b2ae4327a342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 5
-  meshcolor: {fileID: 0}
-  izimekko_suu: 0
 --- !u!65 &574050128
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2730,9 +2701,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11577edcc2d1c94a813b2ae4327a342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 5
-  meshcolor: {fileID: 0}
-  izimekko_suu: 0
 --- !u!65 &697288061
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2918,8 +2886,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94048ee17eb90194fbd4bfa4d5da06a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  izimepower: 0
-  Speed: 5
 --- !u!114 &729136073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3235,8 +3201,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94048ee17eb90194fbd4bfa4d5da06a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  izimepower: 0
-  Speed: 5
 --- !u!114 &877632168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3432,9 +3396,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11577edcc2d1c94a813b2ae4327a342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 5
-  meshcolor: {fileID: 0}
-  izimekko_suu: 0
 --- !u!65 &924040618
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3620,8 +3581,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94048ee17eb90194fbd4bfa4d5da06a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  izimepower: 0
-  Speed: 5
 --- !u!114 &944930955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3802,8 +3761,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94048ee17eb90194fbd4bfa4d5da06a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  izimepower: 0
-  Speed: 5
 --- !u!114 &1165189504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3961,8 +3918,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94048ee17eb90194fbd4bfa4d5da06a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  izimepower: 0
-  Speed: 5
 --- !u!114 &1324483932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4087,8 +4042,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f619f3170e26da45b782a91fb3e818a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  izimepower: 0
-  Speed: 5
 --- !u!65 &1336705173
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4262,8 +4215,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94048ee17eb90194fbd4bfa4d5da06a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  izimepower: 0
-  Speed: 5
 --- !u!114 &1367466179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4467,8 +4418,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94048ee17eb90194fbd4bfa4d5da06a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  izimepower: 0
-  Speed: 5
 --- !u!54 &1456495405
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4516,8 +4465,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94048ee17eb90194fbd4bfa4d5da06a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  izimepower: 0
-  Speed: 5
 --- !u!114 &1462551223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5043,8 +4990,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94048ee17eb90194fbd4bfa4d5da06a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  izimepower: 0
-  Speed: 5
 --- !u!114 &1755734906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5300,8 +5245,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94048ee17eb90194fbd4bfa4d5da06a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  izimepower: 0
-  Speed: 5
 --- !u!114 &1773789056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5426,9 +5369,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11577edcc2d1c94a813b2ae4327a342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 5
-  meshcolor: {fileID: 0}
-  izimekko_suu: 0
 --- !u!65 &1796822599
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5772,9 +5712,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11577edcc2d1c94a813b2ae4327a342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 5
-  meshcolor: {fileID: 0}
-  izimekko_suu: 0
 --- !u!65 &2048806488
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5960,8 +5897,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94048ee17eb90194fbd4bfa4d5da06a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  izimepower: 0
-  Speed: 5
 --- !u!114 &2105237809
 MonoBehaviour:
   m_ObjectHideFlags: 0
