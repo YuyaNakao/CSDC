@@ -301,6 +301,7 @@
     <Compile Include="Assets\Resorces\CommonScene\Model\VRM\UniGLTF\UniUnlit\Scripts\Utils.cs" />
     <Compile Include="Assets\Resorces\GameScene\GamePadInput\Demo\DemoScript.cs" />
     <Compile Include="Assets\Resorces\GameScene\GamePadInput\GamePad.cs" />
+    <Compile Include="Assets\Resorces\GameScene\Script\EnemyManager.cs" />
     <Compile Include="Assets\Resorces\GameScene\Script\FadeManager.cs" />
     <Compile Include="Assets\Resorces\GameScene\Script\GameSceneManager.cs" />
     <Compile Include="Assets\Resorces\GameScene\Script\Line.cs" />
@@ -311,9 +312,7 @@
     <Compile Include="Assets\Resorces\GameScene\Script\NPC\izimerarekko.cs" />
     <Compile Include="Assets\Resorces\GameScene\Script\NPC\NPCManager.cs" />
     <Compile Include="Assets\Resorces\GameScene\Script\NPC\npcmanager1.cs" />
-    <Compile Include="Assets\Resorces\GameScene\Script\NPC\Point.cs" />
-    <Compile Include="Assets\Resorces\GameScene\Script\NPC\RangeObject.cs" />
-    <Compile Include="Assets\Resorces\GameScene\Script\NPC\RangeObjectGizmosEditor.cs" />
+    <Compile Include="Assets\Resorces\GameScene\Script\Player\MotionController.cs" />
     <Compile Include="Assets\Resorces\GameScene\Script\Player\Player_State.cs" />
     <Compile Include="Assets\Resorces\GameScene\Script\Player\PlayerController.cs" />
     <Compile Include="Assets\Resorces\GameScene\Script\Player\PlayerStatus.cs" />
@@ -323,7 +322,11 @@
     <Compile Include="Assets\Resorces\GameScene\Script\StatusControl.cs" />
     <Compile Include="Assets\Resorces\GameScene\Script\Timer.cs" />
     <Compile Include="Assets\Resorces\ResultScene\Script\Camera\CameraScript.cs" />
+    <Compile Include="Assets\Resorces\ResultScene\Script\Input\Input_PushB.cs" />
     <Compile Include="Assets\Resorces\ResultScene\Script\Score\Player_Score.cs" />
+    <Compile Include="Assets\Resorces\ResultScene\Script\Score\Player2_Score.cs" />
+    <Compile Include="Assets\Resorces\ResultScene\Script\Score\Player3_Score.cs" />
+    <Compile Include="Assets\Resorces\ResultScene\Script\Score\Player4_Score.cs" />
     <Compile Include="Assets\Resorces\Standard Assets\Cameras\Scripts\AbstractTargetFollower.cs" />
     <Compile Include="Assets\Resorces\Standard Assets\Cameras\Scripts\AutoCam.cs" />
     <Compile Include="Assets\Resorces\Standard Assets\Cameras\Scripts\FreeLookCam.cs" />
