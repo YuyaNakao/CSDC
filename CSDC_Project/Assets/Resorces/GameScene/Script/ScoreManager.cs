@@ -7,16 +7,19 @@ public class ScoreManager : MonoBehaviour {
     // Use this for initialization
     void Start () {
         score[0] = 0;
-	}
+        score[1] = 0;
+        score[2] = 0;
+        score[3] = 0;
+    }
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
 
-    public void AddScore(int playerNo)
+    public void AddScore(int playerNo,int point)
     {
-        score[playerNo]++;
+        score[playerNo] += point;
     }
 
     // 現在存在しているオブジェクト実体の記憶領域

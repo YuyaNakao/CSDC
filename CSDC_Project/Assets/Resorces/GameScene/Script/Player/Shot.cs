@@ -10,34 +10,50 @@ public class Shot : MonoBehaviour {
     Rigidbody rid;
     Vector3 shot_pos;
     public GameObject obj;
+    public GameObject enemy;
     public float losttime;
     ScoreManager manager;
     public int playerNo;
+    int count;
+    bool enemyflag;
+    Vector3 enemypos;
 
     // Use this for initialization
     void Start () {
         rid = GetComponent<Rigidbody>();
-        //rid.AddForce(transform.forward * speed);
         rid.AddForce((transform.forward) * speed, ForceMode.VelocityChange);
         manager = GameObject.Find("Score").GetComponent<ScoreManager>();
+        count = 0;
+        Destroy(obj, 5);
     }
 	
 	// Update is called once per frame
 	void Update () {
-        int enemycount = transform.childCount;
-        if(enemycount < 0){
-            Destroy(obj, losttime);
+        if (enemyflag)
+        {
+            enemyflag = false;
         }
-        // rid.velocity = transform.forward * speed;
-
     }
 
     private void OnTriggerEnter(Collider hit)
     {
-        if (hit.CompareTag("izimekko"))
+
+       if (hit.CompareTag("izimekko"))
         {
-            manager.AddScore(playerNo-1);
+            count++;
+        }
+
+        if (hit.CompareTag("PointZone"))
+        {
+            manager.AddScore(playerNo - 1, count);
+            Destroy(obj);
         }
     }
+
+    private void OnDestroy()
+    {
+        enemyflag = true;
+    }
+
 
 }
