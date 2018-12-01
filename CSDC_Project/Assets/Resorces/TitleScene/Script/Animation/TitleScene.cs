@@ -20,6 +20,9 @@ public class TitleScene : MonoBehaviour
     {
         sanka_count = 0;
         sanka_flg = false;
+        // マウスカーソル非表示
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 	}
 	
 	// Update is called once per frame

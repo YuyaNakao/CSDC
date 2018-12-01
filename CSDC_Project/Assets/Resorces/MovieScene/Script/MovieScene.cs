@@ -12,8 +12,10 @@ public class MovieScene : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-		
-	}
+        // マウスカーソル非表示
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
 	
 	// Update is called once per frame
 	void Update ()

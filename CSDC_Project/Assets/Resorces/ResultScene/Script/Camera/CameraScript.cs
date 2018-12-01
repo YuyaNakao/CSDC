@@ -48,7 +48,9 @@ public class CameraScript : MonoBehaviour
 
     void Start()
     {
-
+        // マウスカーソル非表示
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
