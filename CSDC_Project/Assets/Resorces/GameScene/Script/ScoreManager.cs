@@ -10,8 +10,11 @@ public class ScoreManager : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void Update ()
+    {
+        // マウスカーソル非表示
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 	}
 
     public void AddScore(int playerNo)
