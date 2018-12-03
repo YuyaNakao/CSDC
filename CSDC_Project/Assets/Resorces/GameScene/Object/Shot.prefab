@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23089187408162170}
   - component: {fileID: 114548191602260430}
   - component: {fileID: 54037377887782516}
-  - component: {fileID: 135713086098144400}
+  - component: {fileID: 135960515027877798}
   m_Layer: 9
   m_Name: Shot
   m_TagString: Shot
@@ -115,9 +115,9 @@ MonoBehaviour:
   speed: 40
   obj: {fileID: 1761500667606972}
   enemy: {fileID: 1750481725786376, guid: af10faf8615f69f438ba079f454f4980, type: 2}
-  losttime: 10
+  losttime: 5
   playerNo: 0
---- !u!135 &135713086098144400
+--- !u!135 &135960515027877798
 SphereCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,5 +127,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 1.5
   m_Center: {x: 0, y: 0, z: 0}
