@@ -114,8 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 40
   obj: {fileID: 1761500667606972}
-  enemy: {fileID: 1750481725786376, guid: af10faf8615f69f438ba079f454f4980, type: 2}
-  losttime: 5
+  losttime: 0
   playerNo: 0
 --- !u!135 &135960515027877798
 SphereCollider:

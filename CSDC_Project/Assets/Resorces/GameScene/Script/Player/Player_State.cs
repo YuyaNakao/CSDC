@@ -23,13 +23,11 @@ public class Player_State : MonoBehaviour {
     private int m_number = 0;
     private CharacterController m_character_controller;
     PlayerStatus playerStatus;
-    MotionController motion;
 
     // Use this for initialization
     void Start () {
         m_character_controller = GetComponent<CharacterController>();
         playerStatus = GetComponent<PlayerStatus>();
-        motion = GetComponent<MotionController>();
     }
 
     // Update is called once per frame
@@ -77,13 +75,11 @@ public class Player_State : MonoBehaviour {
         {
             m_state = STATE.RUN;
         }
-        motion.AnimaMove(1.0f, keyState.LeftStickAxis.x);
     }
 
     //移動中の処理
     private void Run()
     {
-
         Move();
         m_state = STATE.WAIT;
         GamepadState keyState = GamePad.GetState(playerStatus.playerNo);
@@ -133,7 +129,6 @@ public class Player_State : MonoBehaviour {
         move.x = keyState.LeftStickAxis.x * playerStatus.speed * Time.deltaTime;
         move.z = keyState.LeftStickAxis.y * playerStatus.speed * Time.deltaTime;
 
-        motion.AnimaMove(1.0f, keyState.LeftStickAxis.x);
         direction = new Vector3(-move.z, move.y, move.x);
         this.transform.Rotate(direction);
         m_character_controller.Move(direction);

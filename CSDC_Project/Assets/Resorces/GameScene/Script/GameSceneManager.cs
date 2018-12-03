@@ -129,7 +129,7 @@ namespace pon {
             if( m_fade_manager.IsFade() ) {
                 
                 // リザルトシーンの読み込み
-                SceneManager.LoadScene( 0 );
+                SceneManager.LoadScene( 3 );
 
             }
 
