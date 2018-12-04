@@ -6,6 +6,7 @@ using UnityEngine;
 public class Player_Score : MonoBehaviour
 {
     private float move_score;       // スコアの移動量
+    [SerializeField]
     private float player_max_move;  // 数値が大きくなるので調整用の変数
     private Vector3 player_size;
     [SerializeField]
@@ -36,6 +37,15 @@ public class Player_Score : MonoBehaviour
     int numbers4;
 
     [SerializeField]
+    private int p1_num_score;      // 合計スコア
+
+    [SerializeField]
+    private int P1_score;   // プレイヤースコア
+
+    [SerializeField]
+    private int p1_hoji_score;
+
+    [SerializeField]
     private float StartTime;                // 何秒後に開始
 
     private Vector3 py;//Y座標一時保管
@@ -45,9 +55,15 @@ public class Player_Score : MonoBehaviour
     void Start()
     {
         manager = GameObject.Find("Score").GetComponent<ScoreManager>();
-        
+        p1_hoji_score = manager.score[0];
+        // スコア合計の算出
+        p1_num_score = manager.score[0] + manager.score[1] + manager.score[2] + manager.score[3];
+        P1_score = p1_hoji_score / p1_num_score * 100;
+
         // オブジェクトのスケールサイズが大きくなるので調整する
-        player_max_move = manager.score[0] / 40;
+        // 最大移動量　＝　スコア＊１００倍　/ ４０
+        player_max_move = P1_score / 40;
+//        player_max_move = manager.score[0] / 40;
         // 移動量の初期値
         move_score = 0;
         py = init_position;

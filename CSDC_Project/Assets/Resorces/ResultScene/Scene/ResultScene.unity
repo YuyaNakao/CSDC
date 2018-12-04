@@ -1864,6 +1864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 843c93e202f7d3a4889da8f3d0e3775d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player_max_move: 0
   init_position: {x: -0.605, y: 0.762, z: -5.335}
   x: -0.605
   z: -5.335
@@ -1874,6 +1875,9 @@ MonoBehaviour:
   numbers2: 0
   numbers3: 0
   numbers4: 0
+  p1_num_score: 0
+  P1_score: 0
+  p1_hoji_score: 0
   StartTime: 5
 --- !u!114 &334087313
 MonoBehaviour:
@@ -1886,9 +1890,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd077ab1b98886d4388e7af990988370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  init_position: {x: 0, y: 0, z: 0}
-  x: 0
-  z: 0
+  player_max_move: 0
+  init_position: {x: -0.605, y: 0.762, z: -5.335}
+  x: -0.605
+  z: -5.335
   player_score: 0
   player: {fileID: 334087307}
   number: 0
@@ -1896,7 +1901,9 @@ MonoBehaviour:
   numbers2: 0
   numbers3: 0
   numbers4: 0
-  StartTime: 0
+  StartTime: 5
+  p2_num_score: 0
+  P2_score: 0
 --- !u!4 &335761668 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4873165613357150, guid: 42d1b42a8e0f43b44994858b0be65271,
@@ -4545,6 +4552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 843c93e202f7d3a4889da8f3d0e3775d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player_max_move: 0
   init_position: {x: 0.7699999, y: 0.762, z: -5.335}
   x: 0.7699999
   z: -5.335
@@ -4555,6 +4563,9 @@ MonoBehaviour:
   numbers2: 0
   numbers3: 0
   numbers4: 0
+  p1_num_score: 0
+  P1_score: 0
+  p1_hoji_score: 0
   StartTime: 5
 --- !u!114 &835731115
 MonoBehaviour:
@@ -4567,9 +4578,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6d1badc671cb5c4285348506b1c755b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  init_position: {x: 0, y: 0, z: 0}
-  x: 0
-  z: 0
+  player_max_move: 0
+  init_position: {x: 0.7699999, y: 0.762, z: -5.335}
+  x: 0.7699999
+  z: -5.335
   player_score: 0
   player: {fileID: 835731109}
   number: 0
@@ -4578,6 +4590,8 @@ MonoBehaviour:
   numbers3: 0
   numbers4: 0
   StartTime: 0
+  p4_num_score: 0
+  P4_score: 0
 --- !u!4 &851965240 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4681658139978480, guid: 29a1905396f08774fbd28758073ff761,
@@ -4958,6 +4972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 843c93e202f7d3a4889da8f3d0e3775d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player_max_move: 0
   init_position: {x: 0.12, y: 0.762, z: -5.335}
   x: 0.12
   z: -5.335
@@ -4968,6 +4983,9 @@ MonoBehaviour:
   numbers2: 0
   numbers3: 0
   numbers4: 0
+  p1_num_score: 0
+  P1_score: 0
+  p1_hoji_score: 0
   StartTime: 5
 --- !u!114 &933358449
 MonoBehaviour:
@@ -4980,9 +4998,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95fc0e7bfa75e944eb599668950b1802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  init_position: {x: 0, y: 0, z: 0}
-  x: 0
-  z: 0
+  player_max_move: 0
+  init_position: {x: 0.12, y: 0.762, z: -5.335}
+  x: 0.12
+  z: -5.335
   player_score: 0
   player: {fileID: 933358443}
   number: 0
@@ -4991,6 +5010,8 @@ MonoBehaviour:
   numbers3: 0
   numbers4: 0
   StartTime: 0
+  p3_num_score: 0
+  P3_score: 0
 --- !u!1001 &934035175
 Prefab:
   m_ObjectHideFlags: 0
@@ -5961,7 +5982,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a562caf205347104ba2d64d1e1ff3fc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 00000000000000000000000000000000
+  score: 0a000000140000003200000064000000
 --- !u!4 &1067925322
 Transform:
   m_ObjectHideFlags: 0
@@ -8879,6 +8900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 843c93e202f7d3a4889da8f3d0e3775d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player_max_move: 0
   init_position: {x: -1.26, y: 0.762, z: -5.335}
   x: -1.26
   z: -5.335
@@ -8889,6 +8911,9 @@ MonoBehaviour:
   numbers2: 0
   numbers3: 0
   numbers4: 0
+  p1_num_score: 0
+  P1_score: 0
+  p1_hoji_score: 0
   StartTime: 5
 --- !u!65 &1552570869
 BoxCollider:
